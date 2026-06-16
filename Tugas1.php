@@ -33,7 +33,6 @@ if (isset($_POST['Login'])) {
     }
 
     if ($login_sukses) {
-        // Nama session disamakan dengan pengecekan di bawah
         $_SESSION['login'] = $input_username; 
     } else {
         $error_message = "Username atau Password salah!";
@@ -51,8 +50,6 @@ include 'header.php';
 
 
         <nav class="navbar navbar-expand nav-custom rounded shadow-sm mb-4 flex-column">
-        
-            <!-- Bagian Atas: Menu Link -->
             <div class="container-fluid justify-content-center">
                 <ul class="navbar-nav gap-4 fw-bold">
                     <li class="nav-item"><a class="nav-link text-primary" href="menu1.php">Link 1</a></li>
@@ -61,8 +58,6 @@ include 'header.php';
                     <li class="nav-item"><a class="nav-link text-danger" href="Tugas1.php?action=logout">Logout</a></li>
                 </ul>
             </div>
-            
-            <!-- Bagian Bawah: Tulisan Sukses (Tetap di dalam kotak) -->
             <div class="w-100 text-center mt-3 mb-2">
                 <h2 class="text-success fw-bold">Anda telah berhasil login</h2>
             </div>
