@@ -44,13 +44,15 @@ if (isset($_POST['Login'])) {
 include 'header.php';
 ?>
 
-<div class="container my-4">
+<div class="container my-5">
 
     <?php if (isset($_SESSION['login'])) : ?>
         
 
 
-        <nav class="navbar navbar-expand nav-custom rounded shadow-sm mb-4">
+        <nav class="navbar navbar-expand nav-custom rounded shadow-sm mb-4 flex-column">
+        
+            <!-- Bagian Atas: Menu Link -->
             <div class="container-fluid justify-content-center">
                 <ul class="navbar-nav gap-4 fw-bold">
                     <li class="nav-item"><a class="nav-link text-primary" href="menu1.php">Link 1</a></li>
@@ -58,11 +60,15 @@ include 'header.php';
                     <li class="nav-item"><a class="nav-link text-primary" href="menu3.php">Link 3</a></li>
                     <li class="nav-item"><a class="nav-link text-danger" href="Tugas1.php?action=logout">Logout</a></li>
                 </ul>
+            </div>
+            
+            <!-- Bagian Bawah: Tulisan Sukses (Tetap di dalam kotak) -->
+            <div class="w-100 text-center mt-3 mb-2">
                 <h2 class="text-success fw-bold">Anda telah berhasil login</h2>
             </div>
-        </nav>
 
-        <div class="card shadow border-0 p-5 text-center">
+        </nav>
+         
 
     <?php else : ?>
         
